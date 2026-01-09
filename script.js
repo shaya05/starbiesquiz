@@ -1,9 +1,240 @@
 //found this solution online when it gave me an error that the addEventListener was null (because quiz.html didn't have a start id button)
 document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById("start").addEventListener("click", function() {
-    //opens the quiz page in SAME WINDOW??? crazy.
-    window.location.replace("quiz.html");
-  });
+  const startBtn = document.getElementById("start");
+  if (startBtn) {
+    startBtn.addEventListener("click", function() {
+      window.location.replace("quiz.html");
+    });
+  }
+
+  // Attach quiz listeners only when quiz elements exist
+  if (document.getElementById("q1a1")) {
+    //q1
+    {
+      document.getElementById("q1a1").addEventListener("click", function() {
+        addPoint(1, 1, 1);
+      });
+      document.getElementById("q1a2").addEventListener("click", function() {
+        addPoint(5, 1, 2);
+      });
+      document.getElementById("q1a3").addEventListener("click", function() {
+        addPoint(2, 1, 3);
+      });
+      document.getElementById("q1a4").addEventListener("click", function() {
+        addPoint(4, 1, 4);
+      });
+      document.getElementById("q1a5").addEventListener("click", function() {
+        addPoint(3, 1, 5);
+      });
+      document.getElementById("q1a6").addEventListener("click", function() {
+        addPoint(6, 1, 6);
+      });
+    }
+
+    //q2
+    {
+      document.getElementById("q2a1").addEventListener("click", function() {
+        addPoint(4, 2, 1);
+      });
+      document.getElementById("q2a2").addEventListener("click", function() {
+        addPoint(2, 2, 2);
+      });
+      document.getElementById("q2a3").addEventListener("click", function() {
+        addPoint(3, 2, 3);
+      });
+      document.getElementById("q2a4").addEventListener("click", function() {
+        addPoint(1, 2, 4);
+      });
+      document.getElementById("q2a5").addEventListener("click", function() {
+        addPoint(6, 2, 5);
+      });
+      document.getElementById("q2a6").addEventListener("click", function() {
+        addPoint(5, 2, 6);
+      });
+    }
+
+    //q3
+    {
+      document.getElementById("q3a1").addEventListener("click", function() {
+        addPoint(6, 3, 1);
+      });
+      document.getElementById("q3a2").addEventListener("click", function() {
+        addPoint(3, 3, 2);
+      });
+      document.getElementById("q3a3").addEventListener("click", function() {
+        addPoint(4, 3, 3);
+      });
+      document.getElementById("q3a4").addEventListener("click", function() {
+        addPoint(1, 3, 4);
+      });
+      document.getElementById("q3a5").addEventListener("click", function() {
+        addPoint(2, 3, 5);
+      });
+      document.getElementById("q3a6").addEventListener("click", function() {
+        addPoint(5, 3, 6);
+      });
+    }
+
+    //q4
+    {
+      document.getElementById("q4a1").addEventListener("click", function() {
+        addPoint(2, 4, 1);
+      });
+      document.getElementById("q4a2").addEventListener("click", function() {
+        addPoint(4, 4, 2);
+      });
+      document.getElementById("q4a3").addEventListener("click", function() {
+        addPoint(3, 4, 3);
+      });
+      document.getElementById("q4a4").addEventListener("click", function() {
+        addPoint(1, 4, 4);
+      });
+      document.getElementById("q4a5").addEventListener("click", function() {
+        addPoint(6, 4, 5);
+      });
+      document.getElementById("q4a6").addEventListener("click", function() {
+        addPoint(5, 4, 6);
+      });
+    }
+
+    //q5
+    {
+      document.getElementById("q5a1").addEventListener("click", function() {
+        addPoint(5, 5, 1);
+      });
+      document.getElementById("q5a2").addEventListener("click", function() {
+        addPoint(1, 5, 2);
+      });
+      document.getElementById("q5a3").addEventListener("click", function() {
+        addPoint(3, 5, 3);
+      });
+      document.getElementById("q5a4").addEventListener("click", function() {
+        addPoint(2, 5, 4);
+      });
+      document.getElementById("q5a5").addEventListener("click", function() {
+        addPoint(4, 5, 5);
+      });
+      document.getElementById("q5a6").addEventListener("click", function() {
+        addPoint(1, 5, 6);
+      });
+    }
+
+    //q6
+    {
+      document.getElementById("q6a1").addEventListener("click", function() {
+        addPoint(1, 6, 1);
+      });
+      document.getElementById("q6a2").addEventListener("click", function() {
+        addPoint(5, 6, 2);
+      });
+      document.getElementById("q6a3").addEventListener("click", function() {
+        addPoint(3, 6, 3);
+      });
+      document.getElementById("q6a4").addEventListener("click", function() {
+        addPoint(4, 6, 4);
+      });
+      document.getElementById("q6a5").addEventListener("click", function() {
+        addPoint(2, 6, 5);
+      });
+      document.getElementById("q6a6").addEventListener("click", function() {
+        addPoint(6, 6, 6);
+      });
+    }
+
+    //q7
+    {
+      document.getElementById("q7a1").addEventListener("click", function() {
+        addPoint(3, 7, 1);
+      });
+      document.getElementById("q7a2").addEventListener("click", function() {
+        addPoint(2, 7, 2);
+      });
+      document.getElementById("q7a3").addEventListener("click", function() {
+        addPoint(4, 7, 3);
+      });
+      document.getElementById("q7a4").addEventListener("click", function() {
+        addPoint(1, 7, 4);
+      });
+      document.getElementById("q7a5").addEventListener("click", function() {
+        addPoint(6, 7, 5);
+      });
+      document.getElementById("q7a6").addEventListener("click", function() {
+        addPoint(5, 7, 6);
+      });
+    }
+
+    //q8
+    {
+      document.getElementById("q8a1").addEventListener("click", function() {
+        addPoint(2, 8, 1);
+      });
+      document.getElementById("q8a2").addEventListener("click", function() {
+        addPoint(6, 8, 2);
+      });
+      document.getElementById("q8a3").addEventListener("click", function() {
+        addPoint(5, 8, 3);
+      });
+      document.getElementById("q8a4").addEventListener("click", function() {
+        addPoint(3, 8, 4);
+      });
+      document.getElementById("q8a5").addEventListener("click", function() {
+        addPoint(1, 8, 5);
+      });
+      document.getElementById("q8a6").addEventListener("click", function() {
+        addPoint(4, 8, 6);
+      });
+    }
+
+    //q9
+    {
+      document.getElementById("q9a1").addEventListener("click", function() {
+        addPoint(5, 9, 1);
+      });
+      document.getElementById("q9a2").addEventListener("click", function() {
+        addPoint(2, 9, 2);
+      });
+      document.getElementById("q9a3").addEventListener("click", function() {
+        addPoint(1, 9, 3);
+      });
+      document.getElementById("q9a4").addEventListener("click", function() {
+        addPoint(3, 9, 4);
+      });
+      document.getElementById("q9a5").addEventListener("click", function() {
+        addPoint(4, 9, 5);
+      });
+      document.getElementById("q9a6").addEventListener("click", function() {
+        addPoint(6, 9, 6);
+      });
+    }
+
+    //q10
+    {
+      document.getElementById("q10a1").addEventListener("click", function() {
+        addPoint(1, 10, 1);
+      });
+      document.getElementById("q10a2").addEventListener("click", function() {
+        addPoint(6, 10, 2);
+      });
+      document.getElementById("q10a3").addEventListener("click", function() {
+        addPoint(2, 10, 3);
+      });
+      document.getElementById("q10a4").addEventListener("click", function() {
+        addPoint(5, 10, 4);
+      });
+      document.getElementById("q10a5").addEventListener("click", function() {
+        addPoint(3, 10, 5);
+      });
+      document.getElementById("q10a6").addEventListener("click", function() {
+        addPoint(4, 10, 6);
+      });
+    }
+
+    //restart button
+    const restartBtn = document.getElementById("restart");
+    if (restartBtn) {
+      restartBtn.addEventListener("click", restart);
+    }
+  }
 });
 
 //Store result scores
@@ -12,229 +243,6 @@ const values = [["hazelnut", 0], ["vanilla", 0], ["raspberry", 0], ["chocolate",
 //Store # questions answered
 var questionDone = 0;
 
-//event listeners
-//q1
-{
-  document.getElementById("q1a1").addEventListener("click", function() {
-    addPoint(1, 1, 1);
-  });
-  document.getElementById("q1a2").addEventListener("click", function() {
-    addPoint(5, 1, 2);
-  });
-  document.getElementById("q1a3").addEventListener("click", function() {
-    addPoint(2, 1, 3);
-  });
-  document.getElementById("q1a4").addEventListener("click", function() {
-    addPoint(4, 1, 4);
-  });
-  document.getElementById("q1a5").addEventListener("click", function() {
-    addPoint(3, 1, 5);
-  });
-  document.getElementById("q1a6").addEventListener("click", function() {
-    addPoint(6, 1, 6);
-  });
-}
-
-//q2
-{
-  document.getElementById("q2a1").addEventListener("click", function() {
-    addPoint(4, 2, 1);
-  });
-  document.getElementById("q2a2").addEventListener("click", function() {
-    addPoint(2, 2, 2);
-  });
-  document.getElementById("q2a3").addEventListener("click", function() {
-    addPoint(3, 2, 3);
-  });
-  document.getElementById("q2a4").addEventListener("click", function() {
-    addPoint(1, 2, 4);
-  });
-  document.getElementById("q2a5").addEventListener("click", function() {
-    addPoint(6, 2, 5);
-  });
-  document.getElementById("q2a6").addEventListener("click", function() {
-    addPoint(5, 2, 6);
-  });
-}
-
-//q3
-{
-  document.getElementById("q3a1").addEventListener("click", function() {
-    addPoint(6, 3, 1);
-  });
-  document.getElementById("q3a2").addEventListener("click", function() {
-    addPoint(3, 3, 2);
-  });
-  document.getElementById("q3a3").addEventListener("click", function() {
-    addPoint(4, 3, 3);
-  });
-  document.getElementById("q3a4").addEventListener("click", function() {
-    addPoint(1, 3, 4);
-  });
-  document.getElementById("q3a5").addEventListener("click", function() {
-    addPoint(2, 3, 5);
-  });
-  document.getElementById("q3a6").addEventListener("click", function() {
-    addPoint(5, 3, 6);
-  });
-}
-
-//q4
-{
-  document.getElementById("q4a1").addEventListener("click", function() {
-    addPoint(2, 4, 1);
-  });
-  document.getElementById("q4a2").addEventListener("click", function() {
-    addPoint(4, 4, 2);
-  });
-  document.getElementById("q4a3").addEventListener("click", function() {
-    addPoint(3, 4, 3);
-  });
-  document.getElementById("q4a4").addEventListener("click", function() {
-    addPoint(1, 4, 4);
-  });
-  document.getElementById("q4a5").addEventListener("click", function() {
-    addPoint(6, 4, 5);
-  });
-  document.getElementById("q4a6").addEventListener("click", function() {
-    addPoint(5, 4, 6);
-  });
-}
-
-//q5
-{
-  document.getElementById("q5a1").addEventListener("click", function() {
-    addPoint(5, 5, 1);
-  });
-  document.getElementById("q5a2").addEventListener("click", function() {
-    addPoint(1, 5, 2);
-  });
-  document.getElementById("q5a3").addEventListener("click", function() {
-    addPoint(3, 5, 3);
-  });
-  document.getElementById("q5a4").addEventListener("click", function() {
-    addPoint(2, 5, 4);
-  });
-  document.getElementById("q5a5").addEventListener("click", function() {
-    addPoint(4, 5, 5);
-  });
-  document.getElementById("q5a6").addEventListener("click", function() {
-    addPoint(1, 5, 6);
-  });
-}
-
-//q6
-{
-  document.getElementById("q6a1").addEventListener("click", function() {
-    addPoint(1, 6, 1);
-  });
-  document.getElementById("q6a2").addEventListener("click", function() {
-    addPoint(5, 6, 2);
-  });
-  document.getElementById("q6a3").addEventListener("click", function() {
-    addPoint(3, 6, 3);
-  });
-  document.getElementById("q6a4").addEventListener("click", function() {
-    addPoint(4, 6, 4);
-  });
-  document.getElementById("q6a5").addEventListener("click", function() {
-    addPoint(2, 6, 5);
-  });
-  document.getElementById("q6a6").addEventListener("click", function() {
-    addPoint(6, 6, 6);
-  });
-}
-
-//q7
-{
-  document.getElementById("q7a1").addEventListener("click", function() {
-    addPoint(3, 7, 1);
-  });
-  document.getElementById("q7a2").addEventListener("click", function() {
-    addPoint(2, 7, 2);
-  });
-  document.getElementById("q7a3").addEventListener("click", function() {
-    addPoint(4, 7, 3);
-  });
-  document.getElementById("q7a4").addEventListener("click", function() {
-    addPoint(1, 7, 4);
-  });
-  document.getElementById("q7a5").addEventListener("click", function() {
-    addPoint(6, 7, 5);
-  });
-  document.getElementById("q7a6").addEventListener("click", function() {
-    addPoint(5, 7, 6);
-  });
-}
-
-//q8
-{
-  document.getElementById("q8a1").addEventListener("click", function() {
-    addPoint(2, 8, 1);
-  });
-  document.getElementById("q8a2").addEventListener("click", function() {
-    addPoint(6, 8, 2);
-  });
-  document.getElementById("q8a3").addEventListener("click", function() {
-    addPoint(5, 8, 3);
-  });
-  document.getElementById("q8a4").addEventListener("click", function() {
-    addPoint(3, 8, 4);
-  });
-  document.getElementById("q8a5").addEventListener("click", function() {
-    addPoint(1, 8, 5);
-  });
-  document.getElementById("q8a6").addEventListener("click", function() {
-    addPoint(4, 8, 6);
-  });
-}
-
-//q9
-{
-  document.getElementById("q9a1").addEventListener("click", function() {
-    addPoint(5, 9, 1);
-  });
-  document.getElementById("q9a2").addEventListener("click", function() {
-    addPoint(2, 9, 2);
-  });
-  document.getElementById("q9a3").addEventListener("click", function() {
-    addPoint(1, 9, 3);
-  });
-  document.getElementById("q9a4").addEventListener("click", function() {
-    addPoint(3, 9, 4);
-  });
-  document.getElementById("q9a5").addEventListener("click", function() {
-    addPoint(4, 9, 5);
-  });
-  document.getElementById("q9a6").addEventListener("click", function() {
-    addPoint(6, 9, 6);
-  });
-}
-
-//q10
-{
-  document.getElementById("q10a1").addEventListener("click", function() {
-    addPoint(1, 10, 1);
-  });
-  document.getElementById("q10a2").addEventListener("click", function() {
-    addPoint(6, 10, 2);
-  });
-  document.getElementById("q10a3").addEventListener("click", function() {
-    addPoint(2, 10, 3);
-  });
-  document.getElementById("q10a4").addEventListener("click", function() {
-    addPoint(5, 10, 4);
-  });
-  document.getElementById("q10a5").addEventListener("click", function() {
-    addPoint(3, 10, 5);
-  });
-  document.getElementById("q10a6").addEventListener("click", function() {
-    addPoint(4, 10, 6);
-  });
-}
-
-//restart button
-document.getElementById("restart").addEventListener("click", restart);
 
 //point adding function
 function addPoint(type, qNum, aNum) {
